@@ -41,8 +41,8 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="txtResultado3" min="-2" pref="86" max="-2" attributes="0"/>
-                                  <Component id="txtResultado1" min="-2" pref="86" max="-2" attributes="0"/>
+                                  <Component id="txtHoras" min="-2" pref="86" max="-2" attributes="0"/>
+                                  <Component id="txtMetros" min="-2" pref="86" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -70,13 +70,13 @@
               <EmptySpace min="22" pref="150" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="txtResultado2" min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="txtResultado1" min="-2" pref="67" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="lblResultado" alignment="0" pref="78" max="32767" attributes="0"/>
-                          <Component id="txtResultado4" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
+                          <Component id="txtResultado2" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
                           <Component id="lblResultado2" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -87,7 +87,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="txtResultado5" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtKilos" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jrbKilos" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -110,7 +110,7 @@
                       <Component id="lblDerecha" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtResultado6" min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="txtGramos" min="-2" pref="68" max="-2" attributes="0"/>
                           <Component id="lblGramos" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
@@ -154,16 +154,16 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtResultado1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtMetros" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   <Component id="jrbMilimetros" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtResultado2" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                  <Component id="txtResultado1" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Component id="lblResultado2" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="txtResultado4" min="-2" pref="48" max="-2" attributes="0"/>
+                      <Component id="txtResultado2" min="-2" pref="48" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
@@ -175,7 +175,7 @@
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Component id="lblHoras" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtResultado3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="txtHoras" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="47" max="32767" attributes="0"/>
@@ -190,8 +190,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtResultado6" pref="49" max="32767" attributes="0"/>
-                      <Component id="txtResultado5" max="32767" attributes="0"/>
+                      <Component id="txtGramos" pref="49" max="32767" attributes="0"/>
+                      <Component id="txtKilos" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -229,10 +229,13 @@
         <Property name="text" type="java.lang.String" value="METROS"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtResultado1">
+    <Component class="javax.swing.JTextField" name="txtMetros">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField1"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMetrosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jrbCentimetros">
       <Properties>
@@ -246,13 +249,16 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="MIL&#xcd;METROS"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrbMilimetrosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblResultado">
       <Properties>
         <Property name="text" type="java.lang.String" value="RESULTADO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtResultado2">
+    <Component class="javax.swing.JTextField" name="txtResultado1">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField2"/>
       </Properties>
@@ -266,6 +272,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="MINUTOS"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrbMinutosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jrbSegundos">
       <Properties>
@@ -275,7 +284,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrbSegundosActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtResultado3">
+    <Component class="javax.swing.JTextField" name="txtHoras">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField3"/>
       </Properties>
@@ -285,12 +294,12 @@
         <Property name="text" type="java.lang.String" value="RESULTADO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtResultado4">
+    <Component class="javax.swing.JTextField" name="txtResultado2">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField4"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtResultado5">
+    <Component class="javax.swing.JTextField" name="txtKilos">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField5"/>
       </Properties>
@@ -303,7 +312,7 @@
         <Property name="text" type="java.lang.String" value="KG"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtResultado6">
+    <Component class="javax.swing.JTextField" name="txtGramos">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField6"/>
       </Properties>
@@ -322,8 +331,14 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jrbGramos">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrbGramosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jrbKilos">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrbKilosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
